@@ -12,9 +12,10 @@ class MessageRequest(BaseModel):
     session_id: str = "default"
 
 class MessageResponse(BaseModel):
+    role:"AI"
     response: str
 
-@router.post("/chat", response_model=MessageResponse)
+@router.post("/api/v1/chat", response_model=MessageResponse)
 async def chat(request: MessageRequest):
     if not request.message.strip():
         raise HTTPException(status_code=400, detail="Message cannot be empty")
