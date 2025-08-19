@@ -4,3 +4,9 @@ fastapi
 uvicorn
 langchain-community
 python-dotenv
+qdrant-client
+llama-index
+llama_index.core
+llama_index.llms.google-genai
+llama_index.embeddings.google-genai
+llama-index-vector-stores-qdrant
